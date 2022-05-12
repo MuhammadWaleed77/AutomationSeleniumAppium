@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite NUMU">
+
+<listeners>
+<listener class-name="Reources.Listener"></listener>
+</listeners>
+
+  <test name="NUMU Test">
+
+  <!--  <packages>
+     
+        <package name="AndroidAppNumu"></package>
+    </packages> -->
+    <classes>
+          
+           <class name="SideMenus.MyProfile"/>
+           
+          <!--<class name="SideMenus.AudienceMetricesTest"/> -->  
+           <class name="SideMenus.LogoutTest"/>
+   </classes>
+
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite NUMU">
+<listeners>
+<listener class-name="Reources.Listener"></listener>
+<listener class-name="Reources.ExtentReporterNG"></listener>
+</listeners>
+  <test name="NUMU Test">
+  <!--<groups>
+     <run>
+       <include name="Pre"></include>
+    </run>
+   </groups> --> 
+  <!--  <packages>
+     
+        <package name="AndroidAppNumu"></package>
+    </packages> -->
+    <classes>
+           
+         
+          
+           <class name="AndroidAppNumu.LoginTest"/>
+        
+           
+   </classes>
+
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
