@@ -24,6 +24,12 @@ public class PromoFlow   {
 		this.driver = driver;
 		//wait = new WebDriverWait(driver,100);
 	}
+	
+	String insight = System.getProperty("user.dir") +"\\src\\test\\java\\resources\\Insight.jpg";
+	String lambo = System.getProperty("user.dir") +"\\src\\test\\java\\resources\\lambo.jpg";
+	String lykenhypersport = System.getProperty("user.dir") +"\\src\\test\\java\\resources\\lykenhypersport.jpg";
+	String pdfFile =System.getProperty("user.dir")+"\\src\\test\\java\\resources\\pdf.pdf";
+	
 
 	private By newCamBtn = By.xpath("//span[text()='NEW CAMPAIGN']");
 	private By cstmCamp = By.xpath("//p[text()='Custom']");
@@ -99,6 +105,9 @@ public class PromoFlow   {
 	private By addBtn = By.xpath("//*[text()='Add']");
 
 	private By saveDraftBtn= By.xpath("//*[.='Save draft']");
+	private By previewBtn = By.xpath("//button[text()='Preview']"); 
+	private By verifyPreview = By.xpath("//*[.='Campaign Preview']");
+	
 	private By draftToast = By.xpath("//*[text()[normalize-space()='Successfully saved to draft !']]");
 	
 	// **Content Tab**///////
@@ -266,13 +275,15 @@ public class PromoFlow   {
 	}
 
 	public void addProduct_ContentImages() throws InterruptedException {
-		driver.findElement(productPhotos1).sendKeys("C:\\Users\\Numu\\Downloads\\Pictures\\Insight.jpg");
+		
+		
+		driver.findElement(productPhotos1).sendKeys(insight);
 		Thread.sleep(2000);
 		driver.findElement(crop).click();
-		driver.findElement(productPhotos2).sendKeys("C:\\Users\\Numu\\Downloads\\Pictures\\lambo.jpg");
+		driver.findElement(productPhotos2).sendKeys(lambo);
 		Thread.sleep(2000);
 		driver.findElement(crop).click();
-		driver.findElement(productPhotos3).sendKeys("C:\\Users\\Numu\\Downloads\\Pictures\\lykenhypersport.jpg");
+		driver.findElement(productPhotos3).sendKeys(lykenhypersport);
 		Thread.sleep(2000);
 		driver.findElement(crop).click();
 		Thread.sleep(3000);
@@ -324,6 +335,12 @@ public class PromoFlow   {
 	public WebElement draftToast() {
 		return driver.findElement(draftToast);
 	}
+	public WebElement previewBtn() {
+		return driver.findElement(previewBtn);
+	}
+	public WebElement verifyPreview() {
+		return driver.findElement(verifyPreview);
+	}
 	
     /* public void saveAsDraft() throws InterruptedException {
     	 driver.findElement(saveDraftBtn).click();
@@ -362,27 +379,27 @@ public class PromoFlow   {
 		//js.executeScript("window.scrollBy(0,600)");
 		//Thread.sleep(2000);
 		
-		driver.findElement(contentEg).sendKeys("C:\\Users\\Numu\\Downloads\\Pictures\\Insight.jpg");
+		driver.findElement(contentEg).sendKeys(insight);
 		Thread.sleep(2000);
 		driver.findElement(crop).click();
 		Thread.sleep(2000);
-		driver.findElement(contentEg2).sendKeys("C:\\Users\\Numu\\Downloads\\Pictures\\lambo.jpg");
+		driver.findElement(contentEg2).sendKeys(lambo);
 		Thread.sleep(2000);
 		driver.findElement(crop).click();
 		Thread.sleep(2000);
-		driver.findElement(contentEg3).sendKeys("C:\\Users\\Numu\\Downloads\\Pictures\\Insight.jpg");
+		driver.findElement(contentEg3).sendKeys(lykenhypersport);
 		Thread.sleep(2000);
 		driver.findElement(crop).click();
 		Thread.sleep(2000);
-		driver.findElement(contentEg4).sendKeys("C:\\Users\\Numu\\Downloads\\Pictures\\lambo.jpg");
+		driver.findElement(contentEg4).sendKeys(insight);
 		Thread.sleep(2000);
 		driver.findElement(crop).click();
 		Thread.sleep(2000);
-		driver.findElement(contentEg5).sendKeys("C:\\Users\\Numu\\Downloads\\Pictures\\Insight.jpg");
+		driver.findElement(contentEg5).sendKeys(lambo);
 		Thread.sleep(2000);
 		driver.findElement(crop).click();
 		Thread.sleep(2000);
-		driver.findElement(contentEg6).sendKeys("C:\\Users\\Numu\\Downloads\\Pictures\\lykenhypersport.jpg");
+		driver.findElement(contentEg6).sendKeys(lykenhypersport);
 		Thread.sleep(2000);
 		driver.findElement(crop).click();
 		Thread.sleep(1000);
@@ -426,7 +443,7 @@ public class PromoFlow   {
 	 public void increaseBalance() throws InterruptedException {
 		 Thread.sleep(2000);
 		 driver.findElement(purchaseOdNum).sendKeys("123456789");
-		 driver.findElement(pdfUpload).sendKeys("C:\\Users\\Numu\\Downloads\\Pictures\\pdf.pdf");
+		 driver.findElement(pdfUpload).sendKeys(pdfFile);
 		 Thread.sleep(2000);
 		 driver.findElement(reqBtn).click();
 		 Thread.sleep(3000);

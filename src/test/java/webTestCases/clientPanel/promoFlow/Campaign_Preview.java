@@ -18,7 +18,7 @@ import drivercapabilities.BaseSel;
 import webPageObjects.clientPanel.ClientP_Login;
 import webPageObjects.clientPanel.PromoFlow;
 
-public class Campaign_SaveAs_Draft extends BaseSel {
+public class Campaign_Preview extends BaseSel {
 
 	public WebDriver driver;
 	private WebDriverWait wait;
@@ -31,13 +31,13 @@ public class Campaign_SaveAs_Draft extends BaseSel {
 	}
 
 	@Test
-	public void saveAsDraft() throws InterruptedException {
+	public void campaignPreview() throws InterruptedException {
 		ClientP_Login clp = new ClientP_Login(driver);
 		clp.clientPortalLogin();
 		Thread.sleep(5000);
 		PromoFlow pf = new PromoFlow(driver);
 		//pf.iframe();
-		pf.initialStepsPFlow("SaveAsDraft");
+		pf.initialStepsPFlow("Campaign Preview");
 		pf.selectMoneyCampaign();
 		pf.addProduct();
         
@@ -47,12 +47,15 @@ public class Campaign_SaveAs_Draft extends BaseSel {
 		Thread.sleep(2000);
 		
 		pf.addProduct_ContentImages();
-		pf.saveDraftBtn().click();
-		String toastmsg= wait.until(ExpectedConditions.visibilityOf(pf.draftToast())).getText();
+		pf.previewBtn().click();
+	   		
+		
+		//pf.saveDraftBtn().click();
+		String toastmsg= wait.until(ExpectedConditions.visibilityOf(pf.verifyPreview())).getText();
 		
 		 System.out.println(" RESULT ::"+toastmsg);
     	 //.getAttribute("name");
- 		Assert.assertEquals("Successfully saved to draft !", toastmsg);
+ 		Assert.assertEquals("Campaign Preview", toastmsg);
 		
 	}
 

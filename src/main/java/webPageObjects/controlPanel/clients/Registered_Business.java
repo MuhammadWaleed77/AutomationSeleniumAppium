@@ -14,14 +14,7 @@ public class Registered_Business {
 
 	private By client = By.xpath("//span[text()='CLIENTS']");
 	private By registered = By.xpath("(//a[contains(text(),'Registered')])[1]");
-	private By activity = By.xpath("(//a[contains(text(),'Activity')])[1]");
 	
-	
-	private By campApproval = By.xpath("//div//p[text()='Campaign Approval']");
-	private By approve = By.xpath("(//table[@class='table']//tbody//tr//td[2]//span[.='AutomationTestingOnly']/parent::td/parent::tr//td[3]//div//button[text()='Approve'])[1]");
-    private By cProfNotes = By.xpath("//div//span[contains(.,'Testing Data')]");
-	private By selectLabels = By.xpath("//*[text()='Blue']");
-	private By selectLabelBad = By.xpath("//*[text()='Bad']");
 	
 	
 	private By addNew = By.xpath("//button[contains(.,'Add New')]");

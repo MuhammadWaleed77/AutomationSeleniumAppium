@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-12T12:39:25 PKT" name="Default suite" finished-at="2022-05-12T12:40:16 PKT" duration-ms="50716">
+  <suite started-at="2022-05-23T12:33:32 PKT" name="Default suite" finished-at="2022-05-23T12:36:05 PKT" duration-ms="153623">
     <groups>
     </groups>
-    <test started-at="2022-05-12T12:39:25 PKT" name="Default test" finished-at="2022-05-12T12:40:16 PKT" duration-ms="50716">
-      <class name="webTestCases.clientPanel.promoFlow.Campaign_SaveAs_Draft">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:webTestCases.clientPanel.promoFlow.Campaign_SaveAs_Draft@32ee6fee]" started-at="2022-05-12T12:39:25 PKT" name="initialize" finished-at="2022-05-12T12:39:31 PKT" duration-ms="5828" status="PASS">
+    <test started-at="2022-05-23T12:33:32 PKT" name="Default test" finished-at="2022-05-23T12:36:05 PKT" duration-ms="153623">
+      <class name="webTestCases.clientPanel.promoFlow.Multiple_ProductMoney_Campaign">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:webTestCases.clientPanel.promoFlow.Multiple_ProductMoney_Campaign@32ee6fee]" started-at="2022-05-23T12:33:32 PKT" name="initialize" finished-at="2022-05-23T12:33:37 PKT" duration-ms="5172" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="single_ProdMoney_Camp()[pri:0, instance:webTestCases.clientPanel.promoFlow.Campaign_SaveAs_Draft@32ee6fee]" started-at="2022-05-12T12:39:31 PKT" name="single_ProdMoney_Camp" finished-at="2022-05-12T12:40:16 PKT" duration-ms="44707" status="PASS">
+        <test-method signature="multi_ProdMoney_Camp()[pri:0, instance:webTestCases.clientPanel.promoFlow.Multiple_ProductMoney_Campaign@32ee6fee]" started-at="2022-05-23T12:33:37 PKT" name="multi_ProdMoney_Camp" finished-at="2022-05-23T12:36:01 PKT" duration-ms="144248" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- single_ProdMoney_Camp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:webTestCases.clientPanel.promoFlow.Campaign_SaveAs_Draft@32ee6fee]" started-at="2022-05-12T12:40:16 PKT" name="tearDown" finished-at="2022-05-12T12:40:16 PKT" duration-ms="132" status="PASS">
+        </test-method> <!-- multi_ProdMoney_Camp -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:webTestCases.clientPanel.promoFlow.Multiple_ProductMoney_Campaign@32ee6fee]" started-at="2022-05-23T12:36:01 PKT" name="tearDown" finished-at="2022-05-23T12:36:05 PKT" duration-ms="4171" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- webTestCases.clientPanel.promoFlow.Campaign_SaveAs_Draft -->
+      </class> <!-- webTestCases.clientPanel.promoFlow.Multiple_ProductMoney_Campaign -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

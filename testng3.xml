@@ -34,4 +34,14 @@
 			<class name="webTestCases.clientPanel.promoFlow.Campaign_SaveAs_Draft"></class>
 		</classes>
 	</test>
+	<test name="Campaign Preview">
+		<classes>
+			<class name="webTestCases.clientPanel.promoFlow.Campaign_Preview"></class>
+		</classes>
+	</test>
+	<test name=" Profile Notes">
+		<classes>
+			<class name="webTestCases.controlPanel.users.VerifyProfile Notes"></class>
+		</classes>
+	</test>
 </suite> <!-- Suite -->

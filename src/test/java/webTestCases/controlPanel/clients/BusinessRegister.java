@@ -1,6 +1,9 @@
 package webTestCases.controlPanel.clients;
 
+import java.awt.image.BufferedImage;
 import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -18,6 +21,7 @@ import webPageObjects.controlPanel.clients.Registered_Business;
 public class BusinessRegister extends BaseSel {
 
 	public WebDriver driver;
+	public BufferedImage img;
 
 	@BeforeTest
 	public void initialize() throws IOException {
@@ -38,7 +42,9 @@ public class BusinessRegister extends BaseSel {
 		rb.getRegistered().click();
 		rb.getAddNew().click();
 		// Thread.sleep(5000);
-		rb.getUploadbtn().sendKeys("C:\\Users\\Numu\\Downloads\\Pictures\\Automation.png");
+		//rb.getUploadbtn().sendKeys("C:\\Users\\Numu\\Downloads\\Pictures\\Automation.png");
+		String imagePath = System.getProperty("user.dir") +"\\src\\test\\java\\resources\\Automation.png";
+		rb.getUploadbtn().sendKeys(imagePath);
 		Thread.sleep(2000);
 		rb.getCrop().click();
 		Thread.sleep(2000);
@@ -83,7 +89,7 @@ public class BusinessRegister extends BaseSel {
 		
 	
 		//((JavascriptExecutor) driver).executeScript("document.getElementByClassName('sc-hFrEEg fdyYRa').style.display='block'';");
-		rb.getBannerBackground().sendKeys("C:\\Users\\Numu\\Downloads\\Pictures\\Automation.png");
+		rb.getBannerBackground().sendKeys(imagePath);
 		Thread.sleep(3000);
 		rb.getBannerCrop().click();
 		rb.getRegisterCompany().click();
@@ -102,7 +108,12 @@ public class BusinessRegister extends BaseSel {
 		
 		
 	}
-
+      
+	
+		/*public void loadImage() {
+			img= ImageIO.read(dddfd.class.getResource("src/main/java/Reources/Automation.png"));
+		}*/
+	
 	@AfterTest
 	public void teardown() {
 

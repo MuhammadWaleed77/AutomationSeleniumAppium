@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="webTestCases.clientPanel.promoFlow.Campaign_SaveAs_Draft">
+      <class name="webTestCases.controlPanel.clients.BusinessRegister">
         <methods>
-          <include name="single_ProdMoney_Camp"/>
+          <include name="teardown"/>
+          <include name="registerBusiness"/>
           <include name="initialize"/>
-          <include name="tearDown"/>
         </methods>
-      </class> <!-- webTestCases.clientPanel.promoFlow.Campaign_SaveAs_Draft -->
+      </class> <!-- webTestCases.controlPanel.clients.BusinessRegister -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
