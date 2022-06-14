@@ -1,9 +1,13 @@
 package webTestCases.controlPanel.users;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -30,23 +34,32 @@ public class UserRegister extends BaseSel {
 	}
 
 	@Test
-	public void registerUser() throws InterruptedException {
+	public void registerUser() throws InterruptedException, IOException, ParseException {
 		Registered_Users ru = new Registered_Users(driver);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		CP_Login cp = new CP_Login(driver);
 		
 
-		cp.getLogin();
+		cp.getLogin("muhammad.waleed@numumail.com" , "123456");
 
 		ru.getUsers().click();
 		ru.getRegisteredusers().click();
+		Thread.sleep(1000);
 		ru.getAddNew().click();
 
 		ru.getEnterInstaname().click();
 		// Thread.sleep(2000);
 		ru.getEnterNameToGenerate().sendKeys("sleepy_cat312");
 		ru.getScrapetextField().click();
+		//Thread.sleep(3000);
+		/*JSONParser jsonParser = new JSONParser();
+		
+		FileReader reader = new FileReader("C:/Users/Numu/Downloads/sleepy.json");
+		//Read JSON file
+		Object obj = jsonParser.parse(reader);*/
+		
 		ru.getScrapetextField().sendKeys(ScrapedData.userScrapedData);
+		//ru.getScrapetextField().sendKeys(obj);
 		ru.getClickScrape().click();
 		// Thread.sleep(2000);
 		/*ru.getGenerateAndOpen().click();
@@ -73,10 +86,24 @@ public class UserRegister extends BaseSel {
 		ru.getAgeOther().click();
 		js.executeScript("window.scrollBy(0,660)");
 		ru.getSameEmailCheckBox().click();
+		ru.getAskPricePost().sendKeys("1");
+		ru.getAskPriceReel().sendKeys("1");
+		ru.getAskPriceStory().sendKeys("1");
 		ru.getCountry().click();
 		ru.getSpain().click();
 		ru.getCity().click();
 		ru.getAlbacete().click();
+		ru.getType().click();
+		ru.getSelectPaypal().click();
+		ru.getPaypal().click();
+		ru.getShippingAdress().sendKeys(" NuMU center 1");
+		ru.getShippingUnit().sendKeys("12");
+		ru.getPostalCode().sendKeys("123ABC");
+		ru.getOccupation().click();
+		ru.getSelectIndividual().click();
+		ru.getSameFullName().click();
+		ru.getIdPassport().sendKeys("1A2B3C");
+		ru.getHealth().click();
 		js.executeScript("window.scrollBy(0,400)");
 		ru.getAddUserClick().click();
 		Thread.sleep(5000);

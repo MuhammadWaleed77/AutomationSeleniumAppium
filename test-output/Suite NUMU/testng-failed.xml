@@ -5,7 +5,7 @@
     <listener class-name="SelResources.SelListeners"/>
     <listener class-name="Reources.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="Validating navigation Bar (failed)">
+  <test thread-count="5" name="Single ProMoney Campaign(failed)">
     <classes>
       <class name="webTestCases.clientPanel.promoFlow.Single_ProductMoney_Campaign">
         <methods>
@@ -15,5 +15,38 @@
         </methods>
       </class> <!-- webTestCases.clientPanel.promoFlow.Single_ProductMoney_Campaign -->
     </classes>
-  </test> <!-- Validating navigation Bar (failed) -->
+  </test> <!-- Single ProMoney Campaign(failed) -->
+  <test thread-count="5" name="Multiple ProMoney Campaign(failed)">
+    <classes>
+      <class name="webTestCases.clientPanel.promoFlow.Multiple_ProductMoney_Campaign">
+        <methods>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+          <include name="multi_ProdMoney_Camp"/>
+        </methods>
+      </class> <!-- webTestCases.clientPanel.promoFlow.Multiple_ProductMoney_Campaign -->
+    </classes>
+  </test> <!-- Multiple ProMoney Campaign(failed) -->
+  <test thread-count="5" name="Campaign Save as Draft(failed)">
+    <classes>
+      <class name="webTestCases.clientPanel.promoFlow.Campaign_SaveAs_Draft">
+        <methods>
+          <include name="saveAsDraft"/>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- webTestCases.clientPanel.promoFlow.Campaign_SaveAs_Draft -->
+    </classes>
+  </test> <!-- Campaign Save as Draft(failed) -->
+  <test thread-count="5" name="Campaign Preview(failed)">
+    <classes>
+      <class name="webTestCases.clientPanel.promoFlow.Campaign_Preview">
+        <methods>
+          <include name="campaignPreview"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- webTestCases.clientPanel.promoFlow.Campaign_Preview -->
+    </classes>
+  </test> <!-- Campaign Preview(failed) -->
 </suite> <!-- Failed suite [Suite NUMU] -->

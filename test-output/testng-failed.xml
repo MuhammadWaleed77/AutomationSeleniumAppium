@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="webTestCases.controlPanel.clients.BusinessRegister">
+      <class name="webTestCases.controlPanel.clients.SearchBusiness">
         <methods>
-          <include name="teardown"/>
-          <include name="registerBusiness"/>
           <include name="initialize"/>
+          <include name="teardown"/>
+          <include name="testing"/>
         </methods>
-      </class> <!-- webTestCases.controlPanel.clients.BusinessRegister -->
+      </class> <!-- webTestCases.controlPanel.clients.SearchBusiness -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

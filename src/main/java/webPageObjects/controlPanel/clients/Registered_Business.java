@@ -51,7 +51,16 @@ public class Registered_Business {
 	private By crop2 = By.xpath("(//span[contains(.,'Crop')])[2]");
 	private By register = By.xpath("//button[.='Register Company']");
 	private By toast = By.xpath("//*[text()='Company has been created successfully.']");
+	
+	//Update 
+	private By updateImg= By.xpath("//div[@class='fileUpload btn blue-btn']");
+	private By updateCompany = By.xpath("//button[.='Update Company']");
+	private By beauty = By.xpath("//div[text()=\"Beauty\"]");
+	private By updateToast = By.xpath("//*[text()='Company has been updated successfully.']");
 
+	public WebElement getUpdateToast() {
+		return driver.findElement(updateToast);
+	}
 	public WebElement getClients() {
 		return driver.findElement(client);
 	}
@@ -190,6 +199,15 @@ public class Registered_Business {
 	
 	public WebElement getToast() {
 		return driver.findElement(toast);
+	}
+	public WebElement getUpdateImg() {
+		return driver.findElement(updateImg);
+	}
+	public WebElement getUpdateCompany() {
+		return driver.findElement(updateCompany);
+	}
+	public WebElement getBeauty() {
+		return driver.findElement(beauty);
 	}
 
 }

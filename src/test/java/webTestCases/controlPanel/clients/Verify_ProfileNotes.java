@@ -38,7 +38,7 @@ public class Verify_ProfileNotes extends BaseSel {
 		Registered_Business rb = new Registered_Business(driver);
 		Activity act = new Activity(driver);
 
-		cp.getLogin();
+		cp.getLogin("muhammad.waleed@numumail.com", "123456");
 		// Thread.sleep(5000);
 		rb.getClients().click();
 		act.activity().click();

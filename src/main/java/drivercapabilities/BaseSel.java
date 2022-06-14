@@ -12,6 +12,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BaseSel {
@@ -39,7 +41,7 @@ public class BaseSel {
 		// .equal() camparion of values in the objects(i.e browser obj is chrome)
 		if (browserName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
-					"C:/Users/Numu/Downloads/chromedriver_win32 (2)/chromedriver.exe"); // make driver path generic as
+					"C:/Users/Numu/Downloads/chromedriver_win32 (3)/chromedriver.exe"); // make driver path generic as
 			// project path
 
 			// HeadLess and Head Browser
@@ -57,6 +59,11 @@ public class BaseSel {
 			// firefox code
 		} else if (browserName.equals("IE")) {
 			// IE code
+			System.setProperty("webdriver.edge.driver",
+					"C:/Users/Numu/Downloads/edgedriver_win64 (1)/msedgedriver.exe");
+
+			 EdgeOptions options = new EdgeOptions();
+			 driver = new EdgeDriver(options);
 		}
         driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); // initialize in base class so it is set to all
