@@ -24,9 +24,11 @@ public class BaseSel {
 	public WebDriver initializeDriver() throws IOException {
 
 		prop = new Properties();
-		FileInputStream fis = new FileInputStream(
-				System.getProperty("user.dir") + "\\src\\main\\java\\SelResources\\data.properties");
-
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/SelResources/data.properties");
+				//"/Users/numuqa/git/AutomationSeleniumAppium/src/main/java/SelResources/data.properties");
+				//System.getProperty("user.dir") + "\\src\\main\\java\\SelResources\\data.properties");
+				
+                 
 		prop.load(fis);
 		// mvn test -Dbrowser=chrome // select browser via maven/jenkins
 		// Maven considers them as System Properties
@@ -35,23 +37,25 @@ public class BaseSel {
 		// Maven
 		// comment this line if you are sending parameter from Maven
 		String browserName = prop.getProperty("browser");// dont use == use .equal
+		//String browserName= "chrome";
 		// when extracting value from a property
 		System.out.println(browserName);
 		// == is a refrence camparison, both obj point to same memory location
 		// .equal() camparion of values in the objects(i.e browser obj is chrome)
 		if (browserName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
-					"C:/Users/Numu/Downloads/chromedriver_win32 (3)/chromedriver.exe"); // make driver path generic as
+					"/Users/numuqa/Downloads/chromedriver"); // make driver path generic as
 			// project path
 
 			// HeadLess and Head Browser
 			ChromeOptions options = new ChromeOptions();
 			// options.addArguments("--headless");
-			if (browserName.contains("headless")) {
+			/*if (browserName.contains("headless")) {
 				options.addArguments("headless");
-			}
+			}*/
 
 			driver = new ChromeDriver(options);
+			System.out.println("yyyyver");
 			// execute in chrome driver
 
 		} else if (browserName.equals("firefox")) {

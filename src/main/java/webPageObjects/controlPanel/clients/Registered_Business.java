@@ -46,8 +46,10 @@ public class Registered_Business {
 	private By vat = By.xpath("//input[@name='VAT']");
 	private By billingAddress = By.xpath("//input[contains(@name,'billing_address')]"); // R.E
 	private By businessDescription = By.xpath("//textArea[contains(@name,'description')]");
-	//private By bannerbackground = By.xpath("//div[@class='sc-hGnimi fpbQNH']//input[@type='file']");
-	private By bannerbackground = By.xpath("//div[@class='sc-hFrEEg fdyYRa']//input[@type='file']");
+	//private By bannerbackground = By.xpath("//div[@class='sc-hKdnnL bwxQGS']");
+	//private By bannerbackground = By.xpath("//div[@class='form-group']//div//img[@alt='Plus Icon']");
+	//private By bannerbackground = By.xpath("(//div[@class='form-group']//div)[56]");
+	private By bannerbackground = By.xpath("(//input[@type='file'])[2]");
 	private By crop2 = By.xpath("(//span[contains(.,'Crop')])[2]");
 	private By register = By.xpath("//button[.='Register Company']");
 	private By toast = By.xpath("//*[text()='Company has been created successfully.']");

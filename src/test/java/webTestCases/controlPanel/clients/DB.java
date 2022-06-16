@@ -12,9 +12,13 @@ public class DB {
 
 		// TODO Auto-generated method stub
 		//
+		System.out.println(System.getProperty("os.name"));
+		System.out.println(System.getProperty("user.dir"));
 		String host = "numuworld-api-staging-database.cip1bixrtalr.eu-west-1.rds.amazonaws.com";
 		String port = "3306";
 		Class.forName("com.mysql.cj.jdbc.Driver");
+		
+		
 		
 		Connection con = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/stage-v3", "numuTestDB", "poisonContlearnDB21?");
 		Statement s = con.createStatement();
