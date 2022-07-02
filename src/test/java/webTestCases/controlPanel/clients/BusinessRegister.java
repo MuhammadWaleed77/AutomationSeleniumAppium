@@ -44,7 +44,7 @@ public class BusinessRegister extends BaseSel {
 		CP_Login cp = new CP_Login(driver);
 		Registered_Business rb = new Registered_Business(driver);
 
-		cp.getLogin("muhammad.waleed@numumail.com","123456");
+		cp.getLogin("....",".....");
 		 Thread.sleep(5000);
 		//rb.getClients().click();
 		rb.getRegistered().click();
@@ -127,7 +127,8 @@ public class BusinessRegister extends BaseSel {
 		Clients client = new Clients(driver);
 		Registered_Business rb = new Registered_Business(driver);
 
-		cp.getLogin("muhammad.waleed@numumail.com","123456");
+		cp.getLogin(".....","....
+			    ");
 		//client.getClients().click();
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		WebElement element = wait.until(
