@@ -31,7 +31,7 @@ public class Login extends BaseSel {
    public void correctCred()  {
 	   CP_Login cp = new CP_Login(driver);
 	   System.out.println("1");
-	   cp.getLogin("muhammad.waleed@numumail.com" , "123456");
+	   cp.getLogin("....." , ".....");
 	   
    }
   
@@ -39,7 +39,7 @@ public class Login extends BaseSel {
   public void invalidCred()  {
 	   CP_Login cp = new CP_Login(driver);
 	   System.out.println("2");
-	   cp.getLogin("waleed@nuumail.com" , "1236");
+	   cp.getLogin("...@.com" , "....");
 	   WebDriverWait wait = new WebDriverWait(driver,30);
 	   wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'employee_not_found')]")));
 	   
@@ -50,7 +50,7 @@ public class Login extends BaseSel {
   public void invalidPass() {
 	  CP_Login cp = new CP_Login(driver);
 	  System.out.println("3");
-	  cp.getLogin("muhammad.waleed@numumail.com" , "12346");
+	  cp.getLogin("...." , "....");
 	  WebDriverWait wait = new WebDriverWait(driver,30);
 	   wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[.='invalid password']")));
 	  
