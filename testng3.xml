@@ -8,35 +8,35 @@
 	</listeners>
 	<!-- <test name="Registeration ">
 		<classes>
-			<class name="webTestCases.controlPanel.clients.BusinessRegister" />
+			<class name="webTestCases.controlPanl.s.Register" />
 		</classes>
 	</test>
 
 	<test name="Reg User">
 		<classes>
-			<class name="webTestCases.controlPanel.users.UserRegister" />
+			<class name="webTestCases.controlPanel.u.Register" />
 		</classes>
 	</test> -->
 
 	<test name="Single ProMoney Campaign">
 		<classes>
-			<class name="webTestCases.clientPanel.promoFlow.Single_ProductMoney_Campaign" />
+			<class name="webTestCases.clie.p.Single" />
 		</classes>
 	</test>
 
 	<test name="Multiple ProMoney Campaign">
 		<classes>
-			<class name="webTestCases.clientPanel.promoFlow.Multiple_ProductMoney_Campaign" />
+			<class name="webTestCases.client.promoF.Multip" />
 		</classes>
 	</test> <!-- Test -->
 	<test name="Campaign Save as Draft">
 		<classes>
-			<class name="webTestCases.clientPanel.promoFlow.Campaign_SaveAs_Draft"></class>
+			<class name="webTestCases.client.promo.Campaign_Save"></class>
 		</classes>
 	</test>
 	<test name="Campaign Preview">
 		<classes>
-			<class name="webTestCases.clientPanel.promoFlow.Campaign_Preview"></class>
+			<class name="webTestCases.clinel.promoFlow.C_Preview"></class>
 		</classes>
 	</test>
 	
